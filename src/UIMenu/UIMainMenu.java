@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 import Model.Employee.Employee;
 
-import static UIMenu.UIEmployeeMenu.showEmployeeMenu;
-import static UIMenu.UILoginMenu.*;
+import static UIMenu.UIEmployeeMenu.UIEmployeeMenu.showEmployeeMenu;
+import static UIMenu.UILogin.AuthUserLogin.authUser;
+import static UIMenu.UILogin.UILoginMenu.*;
 
 public class UIMainMenu {
     private static Scanner sc;
