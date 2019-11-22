@@ -75,7 +75,7 @@ public class Team {
         return result / hours;
     }
 
-    private String obtainFacersDetail () {
+    public String obtainFacersDetail () {
         StringBuilder result = new StringBuilder();
         String tittle = "Nombre     Horas     Cant. Donaciones    MP     PC     \n" ;
         String space = "     ";

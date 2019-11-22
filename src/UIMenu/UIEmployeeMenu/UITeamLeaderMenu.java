@@ -35,6 +35,7 @@ public class UITeamLeaderMenu {
                     //System.out.println(tl.getTeam().obtainTeamInformation());
                     //System.out.println(tl.getTeam().obtainTeamAverageAmount());
                     //System.out.println(tl.getTeam().obtainTeamInformation());
+                    //System.out.println(tl.getTeam().obtainFacersDetail());
                     break;
                 case 0:
                     System.out.println("Adios");
