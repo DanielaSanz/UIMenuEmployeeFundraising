@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Team {
 
     private String teamName;
-    private ArrayList<Employee> employees;
+    private ArrayList <Employee> employees;
 
     public Team(String teamName) {
         this.teamName = teamName;
@@ -38,7 +38,6 @@ public class Team {
 
     private int obtainTeamAmountDonations() {
         int result = 0;
-
         for (Employee employee : employees ) {
             if (employee != null)
                 result += employee.getDonations().size();
@@ -46,7 +45,7 @@ public class Team {
         return result;
     }
 
-    private float obtainTeamAverageAmount() {
+    public float obtainTeamAverageAmount() {
         //suma total de las donaciones / cantidad de donacicones
         float result = 0f;
         int amount = 0;
@@ -63,9 +62,17 @@ public class Team {
         return result / amount; // buscar acortar el numero
     }
 
-    private float obtainTeamAverageCatchment () {
+    public float obtainTeamAverageCatchment () {
+        //socios dividido horas trabajadas
         float result = 0f;
-        return result;
+        float hours = 0f;
+        for (Employee employee : employees){
+            if (employee != null) {
+                result += employee.getDonations().size();
+                hours += employee.getHoursWorked();
+            }
+        }
+        return result / hours;
     }
 
     private String obtainFacersDetail () {
@@ -88,8 +95,13 @@ public class Team {
     }
 
     public String obtainTeamInformation() {
-        String result = "Nombre : " + teamName + "\nCD : " + obtainTeamAmountDonations() +
-                         "\nMP : " + obtainTeamAverageAmount() + "\nPC : " + obtainTeamAverageCatchment();
-        return result;
+        StringBuilder result = new StringBuilder();
+        String space = "  ";
+        result.append(teamName).append(space)
+                .append(obtainTeamAmountDonations()).append(space)
+                .append(obtainTeamAverageAmount()).append(space)
+                .append(obtainTeamAverageCatchment());
+
+        return result.toString();
     }
 }

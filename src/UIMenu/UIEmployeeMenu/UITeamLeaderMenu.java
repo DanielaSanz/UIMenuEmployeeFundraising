@@ -6,6 +6,7 @@ import Model.Employee.TeamLeader;
 import java.util.Scanner;
 
 import static UIMenu.UIEmployeeMenu.UIFacerMenu.showFacerMenu;
+import static UIMenu.UIEmployeeMenu.UITeamMenu.showTeamMenu;
 
 public class UITeamLeaderMenu {
 
@@ -30,8 +31,10 @@ public class UITeamLeaderMenu {
                     showFacerMenu(employee);
                     break;
                 case 2:
-                    //showTeamMenu(tl.getTeam());
-                    System.out.println(tl.getTeam().obtainTeamInformation());
+                    showTeamMenu(tl.getTeam());
+                    //System.out.println(tl.getTeam().obtainTeamInformation());
+                    //System.out.println(tl.getTeam().obtainTeamAverageAmount());
+                    //System.out.println(tl.getTeam().obtainTeamInformation());
                     break;
                 case 0:
                     System.out.println("Adios");

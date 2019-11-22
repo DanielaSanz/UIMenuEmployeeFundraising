@@ -10,6 +10,8 @@ public class UITeamMenu {
         do{
             System.out.println(team.getTeamName());
             response = 0;
+            case 1:
+
         }while (response !=0);
     }
 }
