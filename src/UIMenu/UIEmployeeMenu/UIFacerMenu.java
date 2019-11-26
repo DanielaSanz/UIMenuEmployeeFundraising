@@ -1,5 +1,6 @@
 package UIMenu.UIEmployeeMenu;
 
+import Model.Employee.Coach;
 import Model.Employee.Employee;
 import Model.Employee.TeamLeader;
 
@@ -22,7 +23,7 @@ public class UIFacerMenu {
             }
             System.out.println("1. Promedio de captación");
             System.out.println("2. Monto Promedio");
-            if (employee instanceof TeamLeader){
+            if (employee instanceof TeamLeader|| employee instanceof Coach){
                 System.out.println("0. Volver");
             }else{
                 System.out.println("0. Salir");
@@ -45,9 +46,8 @@ public class UIFacerMenu {
                 case 0:
                     if (employee instanceof TeamLeader){
                         showTeamLeaderMenu(employee);
-                    }else {
+                    }else
                         System.out.println("Adios");
-                    }
                     break;
                 default:
                     System.out.println("Debe ingresar una opcion correcta");

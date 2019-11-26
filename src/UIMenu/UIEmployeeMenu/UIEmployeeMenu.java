@@ -1,9 +1,11 @@
 package UIMenu.UIEmployeeMenu;
 
+import Model.Employee.Coach;
 import Model.Employee.Employee;
 import Model.Employee.Facer;
 import Model.Employee.TeamLeader;
 
+import static UIMenu.UIEmployeeMenu.UICoachMenu.showCoachMenu;
 import static UIMenu.UIEmployeeMenu.UIFacerMenu.showFacerMenu;
 import static UIMenu.UIEmployeeMenu.UITeamLeaderMenu.showTeamLeaderMenu;
 
@@ -16,6 +18,9 @@ public class UIEmployeeMenu {
         }
         if (employee instanceof TeamLeader){
             showTeamLeaderMenu(employee);
+        }
+        if (employee instanceof Coach){
+            showCoachMenu(employee);
         }
     }
 

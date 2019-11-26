@@ -36,7 +36,7 @@ public class Team {
     //informacion facer
     // q de donaciones - MP -PC
 
-    private int obtainTeamAmountDonations() {
+    public int obtainTeamAmountDonations() {
         int result = 0;
         for (Employee employee : employees ) {
             if (employee != null)

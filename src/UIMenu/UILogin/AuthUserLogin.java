@@ -21,7 +21,7 @@ public class AuthUserLogin {
                     else if (u instanceof TeamLeader)
                         return employee = new TeamLeader(u.getNickName(),u.getPassword(),u.getDonations(),u.getHoursWorked(),((TeamLeader) u).getTeam());
                     else if (u instanceof Coach)
-                        return null;
+                        return employee = new Coach(u.getNickName(),u.getPassword(),u.getDonations(),u.getHoursWorked(),((Coach) u).getTeams());
                 }
             }
         }
